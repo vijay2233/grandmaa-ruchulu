@@ -3,72 +3,129 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Grandmaa Ruchulu - authentic homemade pickles made with traditional flavours. Order tomato, ginger, red chilli and amla pickles." />
+  <meta name="theme-color" content="#174b22" />
+  <meta name="description" content="Grandmaa Ruchulu — authentic homemade pickles prepared with traditional flavours. Tomato, Ginger, Red Chilli and Amla pickles. Order on WhatsApp." />
   <title>Grandmaa Ruchulu | Homemade Pickles</title>
   <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 24px 14px;
-      background: #f7f0d7;
-      color: #292015;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    .page { width: min(100%, 900px); text-align: center; }
-    .poster {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 8px 28px rgba(55, 35, 10, .22);
-    }
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin: 20px 0 10px;
-    }
-    .button {
-      display: inline-block;
-      min-width: 190px;
-      padding: 14px 22px;
-      border-radius: 999px;
-      color: #fff;
-      background: #167a35;
-      text-decoration: none;
-      font-size: 17px;
-      font-weight: 700;
-    }
-    .button.whatsapp { background: #168b45; }
-    .button:hover { filter: brightness(.92); }
-    footer { margin-top: 12px; font-size: 13px; color: #625744; }
-    @media (max-width: 480px) {
-      body { padding: 10px 8px; }
-      .actions { gap: 8px; margin-top: 14px; }
-      .button { width: 100%; min-width: 0; }
-    }
+    :root{--green:#174b22;--green2:#237a36;--red:#b9251e;--gold:#ffd34d;--cream:#fff8e8;--ink:#302315}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+    a{color:inherit}
+    .topbar{background:var(--green);color:#fff;text-align:center;padding:9px 14px;font-size:.9rem;letter-spacing:.2px}
+    header{background:linear-gradient(120deg,#fff4c9,#ffe18a);border-bottom:4px solid #e7ad32}
+    .nav{max-width:1120px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-family:Georgia,serif;font-weight:800;font-size:clamp(1.45rem,4vw,2rem);color:var(--green);text-decoration:none;line-height:1.05}
+    .brand span{display:block;color:var(--red);font-size:.75rem;font-family:Arial,sans-serif;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;margin-top:5px}
+    .nav a.cta{background:var(--green);color:white;text-decoration:none;padding:11px 19px;border-radius:30px;font-weight:700}
+    .hero{max-width:1120px;margin:28px auto 0;padding:0 20px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:32px}
+    .hero-copy{padding:18px 4px}
+    .eyebrow{display:inline-block;background:#ffedaa;color:#71420b;border:1px solid #efc45b;padding:6px 12px;border-radius:30px;font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+    h1{font-family:Georgia,serif;color:var(--green);font-size:clamp(2.5rem,5.5vw,4.4rem);line-height:1.04;margin:17px 0}
+    h1 em{color:var(--red);font-style:normal}
+    .hero-copy p{font-size:1.12rem;max-width:510px;color:#5a4935}
+    .hero-buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 21px;border-radius:30px;text-decoration:none;font-weight:800;transition:transform .15s,filter .15s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(.96)}
+    .btn-primary{background:var(--green2);color:white;box-shadow:0 5px 14px #174b2230}
+    .btn-secondary{background:var(--red);color:white}
+    .hero-poster{width:100%;height:auto;display:block;border-radius:18px;box-shadow:0 15px 38px #583b1c38;border:5px solid white}
+    section{padding:62px 20px}
+    .section-inner{max-width:1120px;margin:auto}
+    .section-title{text-align:center;margin:0 0 10px;color:var(--green);font:800 clamp(2rem,4vw,2.8rem) Georgia,serif}
+    .section-sub{text-align:center;color:#6a5945;margin:0 auto 32px;max-width:650px}
+    .products{background:#fffdf6}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .card{background:#fff;border:1px solid #f0dfb9;border-radius:17px;padding:24px 16px;text-align:center;box-shadow:0 7px 22px #684a1a0d}
+    .jar{width:76px;height:76px;border-radius:50%;margin:0 auto 13px;display:grid;place-items:center;background:#fff0c7;font-size:2.2rem}
+    .card h3{font:800 1.3rem Georgia,serif;color:#693a15;margin:8px 0}
+    .card p{font-size:.93rem;color:#75634e;margin:0}
+    .price-area{background:linear-gradient(135deg,#174b22,#246c31);color:#fff}
+    .price-area .section-title{color:#ffdf69}
+    .price-area .section-sub{color:#e8f0e4}
+    .price-grid{display:grid;grid-template-columns:repeat(2,minmax(0,280px));justify-content:center;gap:18px}
+    .price{background:#fff8df;color:var(--green);border-radius:16px;padding:23px;text-align:center;border:3px solid #f5c84c}
+    .price strong{display:block;font-size:2.5rem;line-height:1.2;color:var(--red);font-weight:900}
+    .price span{font-weight:800;font-size:1.05rem}
+    .promise{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+    .promise div{background:#ffffff16;border:1px solid #ffffff30;border-radius:12px;padding:17px;text-align:center;font-weight:700}
+    .order{text-align:center;background:#fff4d4}
+    .order-box{max-width:760px;margin:auto;background:#fff;border:1px solid #f0d89c;border-radius:20px;padding:32px 22px;box-shadow:0 10px 30px #5b41161a}
+    .phone{font-size:clamp(1.7rem,5vw,2.5rem);font-weight:900;color:var(--green);margin:12px 0}
+    footer{background:#123d1b;color:#f8f1d9;text-align:center;padding:24px 16px;font-size:.92rem}
+    footer strong{color:#ffdb5c}
+    .sticky-order{display:none}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;gap:18px;margin-top:18px}.hero-copy{text-align:center}.hero-copy p{margin-left:auto;margin-right:auto}.hero-buttons{justify-content:center}.hero-poster{max-width:620px;margin:auto}.cards{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:520px){.nav{padding:13px 15px}.nav a.cta{padding:9px 13px;font-size:.88rem}.hero{padding:0 13px}.hero-copy{padding:12px 0}.hero-copy p{font-size:1rem}section{padding:46px 14px}.cards{gap:11px}.card{padding:18px 10px}.jar{width:62px;height:62px;font-size:1.8rem}.card h3{font-size:1.12rem}.price-grid{gap:11px}.price{padding:18px 10px}.price strong{font-size:2rem}.promise{grid-template-columns:1fr;gap:10px}.sticky-order{display:flex;position:fixed;bottom:12px;left:12px;right:12px;z-index:10;justify-content:center;background:#168b45;color:#fff;text-decoration:none;padding:14px;border-radius:40px;font-weight:900;box-shadow:0 5px 20px #0004}footer{padding-bottom:82px}}
   </style>
 </head>
 <body>
-  <main class="page">
-    <!-- Keep the poster image in the same folder as this index.html file. -->
-    <img
-      class="poster"
-      src="Grandmaa%20Ruchulu%20Ginger%20Pickle%20Poster.png"
-      alt="Grandmaa Ruchulu homemade pickles - Tomato, Ginger, Red Chilli and Amla. 1 kg ₹600 and half kg ₹300. Contact 9963408824."
-    />
+  <div class="topbar">Homemade goodness • Traditional recipes • Freshly prepared with care</div>
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#home">Grandmaa Ruchulu<span>The taste of Grandma’s kitchen</span></a>
+      <a class="cta" href="https://wa.me/919963408824?text=Hello%20Grandmaa%20Ruchulu%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order Now</a>
+    </nav>
+  </header>
 
-    <div class="actions">
-      <a class="button" href="tel:+919963408824">Call: 9963408824</a>
-      <a class="button whatsapp" href="https://wa.me/919963408824?text=Hello%20Grandmaa%20Ruchulu%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
-    </div>
-    <footer>Grandmaa Ruchulu · The Traditional Taste of Grandma’s Kitchen!</footer>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">A little taste of home</span>
+        <h1>Grandmaa <em>Ruchulu</em></h1>
+        <p>Enjoy authentic homemade pickles prepared with traditional flavours. Bring the warmth and delicious taste of Grandma’s kitchen to your meals.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="https://wa.me/919963408824?text=Hello%20Grandmaa%20Ruchulu%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a>
+          <a class="btn btn-secondary" href="tel:+919963408824">Call 9963408824</a>
+        </div>
+      </div>
+      <img class="hero-poster" src="Grandmaa%20Ruchulu%20Ginger%20Pickle%20Poster.png" alt="Grandmaa Ruchulu homemade pickle poster showing Tomato, Ginger, Red Chilli and Amla pickles with prices" />
+    </section>
+
+    <section class="products" id="pickles">
+      <div class="section-inner">
+        <h2 class="section-title">Our Homemade Pickles</h2>
+        <p class="section-sub">Traditional favourites made to add a burst of flavour to every meal.</p>
+        <div class="cards">
+          <article class="card"><div class="jar" aria-hidden="true">🍅</div><h3>Tomato Pickle</h3><p>A tangy, spicy classic.</p></article>
+          <article class="card"><div class="jar" aria-hidden="true">🫚</div><h3>Ginger Pickle</h3><p>A bold traditional favourite.</p></article>
+          <article class="card"><div class="jar" aria-hidden="true">🌶️</div><h3>Red Chilli Pickle</h3><p>For those who love a spicy kick.</p></article>
+          <article class="card"><div class="jar" aria-hidden="true">🟢</div><h3>Amla Pickle</h3><p>A deliciously distinctive taste.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="price-area" id="prices">
+      <div class="section-inner">
+        <h2 class="section-title">Simple &amp; Tasty Pricing</h2>
+        <p class="section-sub">Choose the pack size that works for you.</p>
+        <div class="price-grid">
+          <div class="price"><span>1 KG</span><strong>₹600</strong></div>
+          <div class="price"><span>½ KG</span><strong>₹300</strong></div>
+        </div>
+        <div class="promise">
+          <div>🌿 Homemade Taste</div>
+          <div>🥣 Traditional Recipes</div>
+          <div>✓ Quality Ingredients</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order" id="contact">
+      <div class="order-box">
+        <h2 class="section-title">A Taste of Grandma’s Love!</h2>
+        <p class="section-sub">Ready to order your favourite pickle? Get in touch with us today.</p>
+        <div class="phone">9963408824</div>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="https://wa.me/919963408824?text=Hello%20Grandmaa%20Ruchulu%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">💬 WhatsApp Us</a>
+          <a class="btn btn-secondary" href="tel:+919963408824">☎ Call Now</a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer><strong>Grandmaa Ruchulu</strong><br />The Traditional Taste of Grandma’s Kitchen!<br />© <span id="year"></span> Grandmaa Ruchulu. All rights reserved.</footer>
+  <a class="sticky-order" href="https://wa.me/919963408824?text=Hello%20Grandmaa%20Ruchulu%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
